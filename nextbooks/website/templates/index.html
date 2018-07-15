@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NEXTbooks - Home</title>
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'website/main.css' %}">
+</head>
+<body>
+
+    <!--<img src="https://openclipart.org/download/275692/1489798288.svg", style="width:256px;height:256px;"> -->
+    <img src="https://imgur.com/wLtLiFl.png", style="width:256px;height:256px;">
+
+    <header>
+        <h1>Welcome, {{ userFirstName }}!</h1>
+    </header>
+
+    <div class="buttonBar">
+        <a class="actionButton" href="{% url 'index' %}">My Feed</a>
+        <a class="actionButton" href="{% url 'find' %}">Find Resources</a>
+        <a class="actionButton" href="{% url 'index' %}">Post New Resource</a>
+        <a class="actionButton" href="{% url 'index' %}">My Resources</a>
+    </div>
+
+</body>
+</html>

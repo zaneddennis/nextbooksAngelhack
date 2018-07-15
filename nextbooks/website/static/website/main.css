@@ -1,0 +1,41 @@
+
+html {
+    font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #382F86;
+}
+
+nav {
+    background: #382F86;
+}
+
+nav a {
+    color: white;
+    margin: 16px;
+    font-size: 24px;
+}
+
+h1 {
+    color: #382F86;
+    font-size: 48px;
+}
+
+.actionButton {
+    display: inline-block;
+    padding: 4px;
+    background-color: #ee9f28;
+}
+
+.resource {
+}
+
+.resourceTitle {
+    font-size: 36px;
+}
+
+.tags p {
+    margin: 2px;
+}

@@ -1,0 +1,34 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>My Feed</h1>
+<hr>
+
+{% for resource in resources %}
+    <article class="resource">
+        <br>
+        <a class="resourceTitle" href="{% url 'resource-detail' resource.id %}">{{ resource.resourceTitle }} [{{ resource.score }} points]</a>
+        <div class="tags">
+            <p>{{ resource.levelTag }}</p>
+            <p>{{ resource.subjectTag }}</p>
+            {% if resource.courseNumberTag %}
+                <p>{{ resource.courseNumberTag }}</p>
+            {% if resource.courseTag %}
+                <p>{{ resource.courseTag }}</p>
+            {% endif %}
+            {% endif %}
+            <p>{{ resource.institutionTag }}</p>
+        </div>
+        <div class="actionRow">
+            <a class="actionButton">Add to My Resources</a>
+            <a class="actionButton" href="{% url 'quiz' %}">Quiz Me!</a>
+            <a class="actionButton">Find Similar</a>
+            <a class="actionButton">Like</a>
+        </div>
+    </article>
+    <hr>
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}<title>NEXTbooks</title>{% endblock %}
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'website/main.css' %}">
+</head>
+<body>
+
+    <header>
+        <img src="https://imgur.com/wLtLiFl.png", style=width:128px;height:128px;">
+    </header>
+
+    <nav>
+        <a href="{% url 'index' %}">Home</a>
+        <a href="{% url 'find' %}">Find</a>
+        <a href="{% url 'index' %}">Post</a>
+        <a href="{% url 'index' %}">My Resources</a>
+    </nav>
+
+    {% block content %}{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+
+{% extends "base.html" %}
+
+{% block title %}<title>NEXTbooks - Resource Detail</title>{% endblock %}
+
+{% block content %}
+<h1>{{ resource.resourceTitle }}</h1>
+
+<hr>
+
+<div class="tags">
+    <p>{{ resource.levelTag }}</p>
+    <p>{{ resource.subjectTag }}</p>
+    {% if resource.courseNumberTag %}
+        <p>{{ resource.courseNumberTag }}</p>
+    {% endif %}
+    {% if resource.courseTag %}
+        <p>{{ resource.courseTag }}</p>
+    {% endif %}
+    <p>{{ resource.institutionTag }}</p>
+</div>
+
+<hr>
+
+<p>{{ resource.content }}</p>
+
+<hr>
+
+<div class="actionRow">
+    <a class="actionButton">Add to My Resources</a>
+    <a class="actionButton" href="{% url 'quiz' %}">Quiz Me!</a>
+    <a class="actionButton">Find Similar</a>
+    <a class="actionButton">Like</a>
+</div>
+
+<hr>
+
+<p>[Comment section here]</p>
+
+{% endblock %}
